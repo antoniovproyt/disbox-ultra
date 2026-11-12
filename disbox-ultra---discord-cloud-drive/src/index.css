@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars for clean Discord/IDE styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.35);
+}
+
+/* Theme Presets */
+html[data-theme='nanobanana'] {
+  --theme-accent: #f59e0b;
+  --theme-accent-hover: #d97706;
+}
+html[data-theme='nanobanana'] .bg-indigo-600 {
+  background-color: #d97706 !important;
+}
+html[data-theme='nanobanana'] .hover\:bg-indigo-500:hover {
+  background-color: #f59e0b !important;
+}
+html[data-theme='nanobanana'] .text-indigo-400 {
+  color: #fbbf24 !important;
+}
+html[data-theme='nanobanana'] .border-indigo-500 {
+  border-color: #f59e0b !important;
+}
+
+html[data-theme='emerald'] .bg-indigo-600 {
+  background-color: #059669 !important;
+}
+html[data-theme='emerald'] .hover\:bg-indigo-500:hover {
+  background-color: #10b981 !important;
+}
+html[data-theme='emerald'] .text-indigo-400 {
+  color: #34d399 !important;
+}
+html[data-theme='emerald'] .border-indigo-500 {
+  border-color: #10b981 !important;
+}
+

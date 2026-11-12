@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Ignore Vite HMR WebSocket connection errors in sandbox iframe per environment constraints
+      window.addEventListener('error', function(e) {
+        if (e && e.message && (e.message.includes('WebSocket') || e.message.includes('createWebSocketModuleRunnerTransport') || e.message.includes('ws://') || e.message.includes('wss://'))) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        var reason = e && e.reason ? String(e.reason) : '';
+        if (reason.includes('WebSocket') || reason.includes('createWebSocketModuleRunnerTransport')) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      });
+    </script>
+    <title>Disbox Ultra - Discord Cloud Drive</title>
+    <meta name="description" content="Plataforma avanzada de almacenamiento en la nube mediante servidores de Discord con particionado de archivos (chunking), gestión de etiquetas y transferencias directas por webhooks." />
+    <meta property="og:title" content="Disbox Ultra - Discord Cloud Drive" />
+    <meta property="og:description" content="Plataforma avanzada de almacenamiento en la nube mediante servidores de Discord con particionado de archivos (chunking), gestión de etiquetas y transferencias directas por webhooks." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

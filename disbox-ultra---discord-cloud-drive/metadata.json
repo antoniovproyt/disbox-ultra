@@ -1,0 +1,6 @@
+{
+  "name": "Disbox Ultra - Discord Cloud Drive",
+  "description": "Plataforma avanzada de almacenamiento en la nube mediante servidores de Discord con particionado de archivos (chunking), gestión de etiquetas y transferencias directas por webhooks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
