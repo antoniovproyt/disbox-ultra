@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: disbox-ultra
+    runtime: node
+    plan: free
+    rootDir: disbox-ultra---discord-cloud-drive
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
